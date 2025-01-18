@@ -2,46 +2,155 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
+
+    <!-- Title Tag -->
+    <title>Play Tic Tac Toe Online | Classic Game</title>
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="Play the classic Tic Tac Toe game online for free! Challenge the AI or a friend in multiplayer mode. Simple, fun, and interactive. Start now!"
+    />
+
+    <!-- Meta Keywords -->
+    <meta
+      name="keywords"
+      content="Tic Tac Toe, Online Tic Tac Toe, Play Tic Tac Toe, Multiplayer Tic Tac Toe, Classic Game, Free Games"
+    />
+
+    <!-- Meta Author -->
+    <meta name="author" content="Gaurav Upadhyay" />
+
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta
+      property="og:title"
+      content="Play Tic Tac Toe Online | Classic Game"
+    />
+    <meta
+      property="og:description"
+      content="Challenge yourself or a friend in this fun and interactive Tic Tac Toe game."
+    />
+    <meta property="og:image" content="images/Game_Start.png" />
+    <meta
+      property="og:url"
+      content="https://gaurav00321.github.io/tic-tac-toeJS/"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <!-- Mode Selection Card -->
-    <div id="mode-selection" class="card">  
-      <h1>Welcome !!</h1>
-      <h1>Select Game Mode</h1>
-      <button id="single-player-btn" class="btn">Single Player</button>
-      <button id="multiplayer-btn" class="btn">Multiplayer</button>
+    <div id="mode-selection" class="card">
+      <h1>Welcome to Tic Tac Toe!</h1>
+      <h2>Select Game Mode</h2>
+      <button id="single-player-btn" class="btn" aria-label="Play against AI">
+        Single Player
+      </button>
+      <button
+        id="multiplayer-btn"
+        class="btn"
+        aria-label="Play against a friend"
+      >
+        Multiplayer
+      </button>
     </div>
 
     <!-- Game Board -->
     <div id="game-board" class="card" style="display: none">
       <h2 id="message">Select Game Mode First</h2>
-      <div class="board">
+      <div class="board" role="grid" aria-label="Tic Tac Toe Board">
         <div class="row">
-          <div class="cell" id="cell-0"></div>
-          <div class="cell" id="cell-1"></div>
-          <div class="cell" id="cell-2"></div>
+          <div
+            class="cell"
+            id="cell-0"
+            role="gridcell"
+            aria-label="Top-left cell"
+          ></div>
+          <div
+            class="cell"
+            id="cell-1"
+            role="gridcell"
+            aria-label="Top-center cell"
+          ></div>
+          <div
+            class="cell"
+            id="cell-2"
+            role="gridcell"
+            aria-label="Top-right cell"
+          ></div>
         </div>
         <div class="row">
-          <div class="cell" id="cell-3"></div>
-          <div class="cell" id="cell-4"></div>
-          <div class="cell" id="cell-5"></div>
+          <div
+            class="cell"
+            id="cell-3"
+            role="gridcell"
+            aria-label="Middle-left cell"
+          ></div>
+          <div
+            class="cell"
+            id="cell-4"
+            role="gridcell"
+            aria-label="Center cell"
+          ></div>
+          <div
+            class="cell"
+            id="cell-5"
+            role="gridcell"
+            aria-label="Middle-right cell"
+          ></div>
         </div>
         <div class="row">
-          <div class="cell" id="cell-6"></div>
-          <div class="cell" id="cell-7"></div>
-          <div class="cell" id="cell-8"></div>
+          <div
+            class="cell"
+            id="cell-6"
+            role="gridcell"
+            aria-label="Bottom-left cell"
+          ></div>
+          <div
+            class="cell"
+            id="cell-7"
+            role="gridcell"
+            aria-label="Bottom-center cell"
+          ></div>
+          <div
+            class="cell"
+            id="cell-8"
+            role="gridcell"
+            aria-label="Bottom-right cell"
+          ></div>
         </div>
       </div>
-      <button id="restart-btn" class="btn">Restart Game</button>
-      <!-- New Game Button -->
-      <button id="new-game-btn">
+
+      <!-- Restart and New Game Buttons -->
+      <button id="restart-btn" class="btn" aria-label="Restart the game">
+        Restart Game
+      </button>
+      <button id="new-game-btn" class="btn" aria-label="Start a new game">
         New Game
       </button>
     </div>
 
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Tic Tac Toe Game | Developed by Gaurav Upadhyay</p>
+      <p>
+        <a href="www.linkedin.com/in/gauravupadhyay-tech" target="_blank"
+          >LInkedin</a
+        >
+        |
+        <a href="https://gaurav00321.github.io/Gaurav_Portfolio/" target="_blank">Portfolio</a>
+      </p>
+    </footer>
+
+    <!-- JavaScript File -->
     <script src="script.js"></script>
   </body>
 </html>
