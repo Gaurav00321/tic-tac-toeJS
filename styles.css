@@ -1,77 +1,79 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body Layout */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e2e6ea; /* Same color as cell hover */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #e2e6ea; /* Same color as cell hover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  color: #333;
 }
 
 /* Centering and Card Layout */
 .card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.4);
-    margin-bottom: 20px;
-    /* Removed hover effect for the card */
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
+    -10px -10px 20px rgba(255, 255, 255, 0.4);
+  margin-bottom: 20px;
+  /* Removed hover effect for the card */
 }
 
 /* Title */
-h1, h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #333;
+h1,
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 /* Buttons */
 button {
-    background-color: #0072ff;
-    color: white;
-    font-size: 16px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-    margin-top: 10px;
+  background-color: #0072ff;
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
 }
 
 button:hover {
-    background-color: #005bb5;
-    transform: translateY(-2px);
+  background-color: #005bb5;
+  transform: translateY(-2px);
 }
 
 button:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 /* Restart Button Style */
 #restart-btn {
   background-color: #0072ff;
-    color: white;
-    font-size: 16px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-    margin-top: 40px;
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 40px;
 }
 
 #restart-btn:hover {
@@ -81,56 +83,56 @@ button:active {
 
 /* Board and Cells */
 .board {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .row {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .cell {
-    width: 80px;
-    height: 80px;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    background-color: #f8f9fa;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.3s ease;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.3s ease;
 }
 
 .cell:hover {
-    background-color: #e2e6ea; /* Same as background and restart button */
-    transform: scale(1.1);
+  background-color: #e2e6ea; /* Same as background and restart button */
+  transform: scale(1.1);
 }
 
 .cell.taken {
-    pointer-events: none;
-    background-color: #e9ecef;
+  pointer-events: none;
+  background-color: #e9ecef;
 }
 
 /* Game Over Message */
 #message {
-    font-size: 20px;
-    font-weight: 500;
-    color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
-    .card {
-        width: 90%;
-    }
+  .card {
+    width: 90%;
+  }
 
-    .cell {
-        width: 70px;
-        height: 70px;
-    }
+  .cell {
+    width: 70px;
+    height: 70px;
+  }
 }
