@@ -140,23 +140,22 @@ button:active {
 /* Footer */
 
 footer {
-    margin-top: 20px;
-    padding: 10px 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
-    color: #0072ff;
-    text-decoration: none;
-    margin: 0 5px;
+  color: #0072ff;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
