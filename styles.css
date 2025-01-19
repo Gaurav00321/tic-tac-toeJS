@@ -8,7 +8,7 @@
 /* Body Layout */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background: linear-gradient(135deg, #3c3a47, #bdbdcf);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,20 @@ body {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
     -10px -10px 20px rgba(255, 255, 255, 0.4);
   /* Removed hover effect for the card */
+  margin-top: 50px;
 }
+
+#counters {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+#counters p {
+  margin: 5px 0;
+}
+
 
 /* Title */
 h1,
@@ -147,7 +160,7 @@ button:active {
 
 /* Footer Design */
 footer {
-  margin-top: 40px;
+  margin-top: 15px;
   padding: 12px 0;
   width: 100%;
   background-color: #1a1a2e;

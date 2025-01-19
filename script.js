@@ -6,6 +6,11 @@ let currentPlayer = PLAYER;
 let gameOver = false;
 let isMultiplayer = false;
 
+// Counters for wins, losses, and draws
+let playerWins = 0;
+let aiWins = 0;
+let draws = 0;
+
 // DOM Elements
 const modeSelection = document.getElementById("mode-selection");
 const gameBoard = document.getElementById("game-board");
@@ -13,6 +18,9 @@ const cells = document.querySelectorAll(".cell");
 const statusMessage = document.getElementById("message");
 const restartBtn = document.getElementById("restart-btn");
 const newGameBtn = document.getElementById("new-game-btn"); // New Game button
+const playerWinsCounter = document.getElementById("player-wins");
+const aiWinsCounter = document.getElementById("ai-wins");
+const drawsCounter = document.getElementById("draws");
 
 // Initialize the board
 function initBoard() {
@@ -42,12 +50,20 @@ function handlePlayerMove(event) {
 
   // Check for winner or game over
   if (checkWinner(currentPlayer)) {
-    statusMessage.textContent =
-      currentPlayer === PLAYER ? "Player 1 Won🎉!!" : "Player 2 Won🎉!";
+    if (currentPlayer === PLAYER) {
+      statusMessage.textContent = "Player 1 Won 🎉!!";
+      playerWins++;
+    } else {
+      statusMessage.textContent = "AI wins! 😔";
+      aiWins++;
+    }
+    updateCounters();
     gameOver = true;
     return;
   } else if (!board.includes(null)) {
-    statusMessage.textContent = "It's a draw!";
+    statusMessage.textContent = "It's a draw! 🤝";
+    draws++;
+    updateCounters();
     gameOver = true;
     return;
   }
@@ -74,11 +90,15 @@ function handleAIMove() {
 
   // Check for winner or game over
   if (checkWinner(AI)) {
-    statusMessage.textContent = "AI wins!";
+    statusMessage.textContent = "AI wins! 😔";
+    aiWins++;
+    updateCounters();
     gameOver = true;
     return;
   } else if (!board.includes(null)) {
-    statusMessage.textContent = "It's a draw!";
+    statusMessage.textContent = "It's a draw! 🤝";
+    draws++;
+    updateCounters();
     gameOver = true;
     return;
   }
@@ -86,6 +106,13 @@ function handleAIMove() {
   // Switch back to player's turn
   currentPlayer = PLAYER;
   statusMessage.textContent = "Your turn (X)";
+}
+
+// Update the win/loss/draw counters
+function updateCounters() {
+  playerWinsCounter.textContent = `Player Wins: ${playerWins}`;
+  aiWinsCounter.textContent = `AI Wins: ${aiWins}`;
+  drawsCounter.textContent = `Draws: ${draws}`;
 }
 
 // Check for a winner
@@ -157,6 +184,8 @@ newGameBtn.addEventListener("click", () => {
   statusMessage.textContent = "Choose your game mode";
   modeSelection.style.display = "block";
   gameBoard.style.display = "none";
+  playerWins = aiWins = draws = 0; // Reset counters
+  updateCounters();
 });
 
 // Mode selection
